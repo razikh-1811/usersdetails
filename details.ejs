@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>User Family Details</title>
+  <style>
+    body {
+      background-color: #e6f0ff;
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 900px;
+      background: #f0f2f5;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+      width: 100%;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .section {
+      flex: 1;
+      min-width: 280px;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: inset 0 0 8px #ddd;
+    }
+
+    .section h3 {
+      margin-top: 0;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 8px;
+      color: #555;
+    }
+
+    .detail {
+      margin: 12px 0;
+      font-size: 16px;
+      color: #444;
+    }
+
+    .label {
+      font-weight: 600;
+      color: #666;
+    }
+
+    .value {
+      margin-left: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Family Details of User: <span><%=username %></span></h1>
+
+    <div class="row">
+      <div class="section">
+        <h3>Father Details</h3>
+        <div class="detail"><span class="label">Name:</span><span class="value"><%=father %></span></div>
+        <div class="detail"><span class="label">Mobile:</span><span class="value"><%=fathernum%></span></div>
+        <div class="detail"><span class="label">Email:</span><span class="value"><%=fathermail%></span></div>
+      </div>
+
+      <div class="section">
+        <h3>Mother Details</h3>
+        <div class="detail"><span class="label">Name:</span><span class="value"><%=momname%></span></div>
+        <div class="detail"><span class="label">Mobile:</span><span class="value"><%=momnum %></span></div>
+        <div class="detail"><span class="label">Email:</span><span class="value"><%=mommail %></span></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="section">
+        <h3>Sibling Details</h3>
+        <div class="detail"><span class="label">Name:</span><span class="value"><%=sibname %></span></div>
+        <div class="detail"><span class="label">Mobile:</span><span class="value"><%=sibnum%></span></div>
+        <div class="detail"><span class="label">Email:</span><span class="value"><%=sibmail%></span></div>
+      </div>
+
+      <div class="section">
+        <h3>Address</h3>
+        <div class="detail"><span class="value"><%=address %></span></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

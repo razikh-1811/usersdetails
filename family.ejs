@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Family Details</title>
+  <style>
+    body {
+      background-color:#e6f0ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    form {
+      background-color:#f0f2f5;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      max-width: 900px;
+      width: 100%;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .row {
+      display: flex;
+      gap:20px;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      flex:1;
+      width: 250px;
+      background-color:#ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .section h3 {
+      margin-top: 0;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+    h2{
+        color:rgb(212, 167, 99);
+    }
+     input[type="submit"]{
+        background-color:#4CAF50;
+        color:white;
+    }
+    input[type="submit"]:hover {
+      background-color:rgb(143, 143, 247);
+      
+    }
+  </style>
+</head>
+<body></body>
+
+<form action="http://localhost:8080/login/details" method="post">
+<input type="hidden" name="username" value="<%= username %>">
+<h2>User Name:  @<%=username%> </h2>    
+  <h1>Family Details</h1>
+
+  <div class="row">
+    <div class="section">
+      <h3>Father Details</h3>
+      <label>Father Name:</label>
+      <input type="text" name="father" placeholder="Enter Father Name" required>
+      <label>Mobile Number:</label>
+      <input type="number" name="fathernum" placeholder="Mobile Number" required>
+      <label>Email:</label>
+      <input type="email" name="fathermail" placeholder="Email" required>
+    </div>
+
+    <div class="section">
+      <h3>Mother Details</h3>
+      <label>Mother Name:</label>
+      <input type="text" name="momname" placeholder="Enter Mother Name" required>
+      <label>Mobile Number:</label>
+      <input type="number" name="momnum" placeholder="Mobile Number" required>
+      <label>Email:</label>
+      <input type="email" name="mommail" placeholder="Email" required>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="section">
+      <h3>Sibling Details</h3>
+      <label>Sibling Name:</label>
+      <input type="text" name="sibname" placeholder="Enter Name" required>
+      <label>Mobile Number:</label>
+      <input type="number" name="sibnum" placeholder="Mobile Number" required>
+      <label>Email:</label>
+      <input type="email" name="sibmail" placeholder="Email" required>
+    </div>
+
+    <div class="section">
+      <h3>Address</h3>
+      <label>Your Address:</label>
+      <textarea name="address" rows="8" placeholder="Enter your address here..."></textarea>
+    </div>
+  </div>
+  <input type="submit">
+
+</form>
+
+</body>
+</html>
